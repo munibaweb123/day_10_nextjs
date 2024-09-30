@@ -87,7 +87,7 @@ export default function GeneratePasswordComponent() {
         <div className="mx-auto max-w-md space-y-6">
           {/* Header with title and description */}
           <div className="space-y-2 text-center">
-            <h1 className="text-3xl font-bold">Password Generator</h1>
+            <h1 className="text-3xl font-bold text-green-600">Password Generator</h1>
             <p className="text-gray-500 dark:text-gray-400">
               Create a secure password with just a few clicks.
             </p>
@@ -110,7 +110,7 @@ export default function GeneratePasswordComponent() {
             {/* Checkboxes for character type inclusion */}
             <div className="space-y-2">
               <Label>Include:</Label>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 text-green-600">
                 <Checkbox
                   id="uppercase"
                   checked={includeUppercase}
@@ -118,7 +118,7 @@ export default function GeneratePasswordComponent() {
                 />
                 <Label htmlFor="uppercase">Uppercase Letters</Label>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 text-green-600">
                 <Checkbox
                   id="lowercase"
                   checked={includeLowercase}
@@ -126,7 +126,7 @@ export default function GeneratePasswordComponent() {
                 />
                 <Label htmlFor="lowercase">Lowercase Letters</Label>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 text-green-600">
                 <Checkbox
                   id="numbers"
                   checked={includeNumbers}
@@ -134,8 +134,8 @@ export default function GeneratePasswordComponent() {
                 />
                 <Label htmlFor="numbers">Numbers</Label>
               </div>
-              <div className="flex items-center space-x-2">
-                <Checkbox
+              <div className="flex items-center space-x-2 text-green-600 ">
+                <Checkbox 
                   id="symbols"
                   checked={includeSymbols}
                   onCheckedChange={handleCheckboxChange(setIncludeSymbols)}
@@ -144,7 +144,7 @@ export default function GeneratePasswordComponent() {
               </div>
             </div>
             {/* Button to generate password */}
-            <Button type="button" className="w-full" onClick={generatePassword}>
+            <Button type="button" className="w-full bg-green-600" onClick={generatePassword} >
               Generate Password
             </Button>
             {/* Display the generated password and button to copy */}
@@ -158,7 +158,7 @@ export default function GeneratePasswordComponent() {
                   readOnly
                   className="flex-1"
                 />
-                <Button type="button" onClick={copyToClipboard}>
+                <Button type="button" onClick={copyToClipboard} className="bg-green-600">
                   Copy to Clipboard
                 </Button>
               </div>
